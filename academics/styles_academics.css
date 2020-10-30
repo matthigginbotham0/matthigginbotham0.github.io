@@ -8,14 +8,14 @@
  
  /* Importing web fonts */
  
-@font-face {
+ @font-face {
 	font-family: Oswald;
-	src: url("Oswald.ttf");
+	src: url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
  }
  
  @font-face {
 	 font-family: Oxygen;
-	 src: url("Oxygen-regular.ttf");
+	 src: url("https://fonts.googleapis.com/css2?family=Oxygen");
  }
 
 
