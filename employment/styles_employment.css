@@ -8,15 +8,9 @@
  
  /* Importing web fonts */
  
- @font-face {
-	font-family: Oswald;
-	src: url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
- }
+ @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
  
- @font-face {
-	 font-family: Oxygen;
-	 src: url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
- }
+ @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
  
  /* Body styles */
  
@@ -90,17 +84,13 @@ nav a:hover{
 /* Header styles */
 
 header {
-	position: absolute;
 	margin: 0px;
-	min-width: 100%;
 }
 
 header #title {
 	color: black;
-	float: left;
-	position: absolute;
-	padding-left: 5%;
-	padding-top: 45px;
+	padding-left: 5vw;
+	padding-top: 4em;
 }
 
 header h1 {
@@ -118,15 +108,21 @@ header h2 {
 	letter-spacing: 0.1em;
 }
  
+hr {
+	margin: 4em 5vw; 
+	width: 90vw;
+}
  
 /* Section Styles */
 
-div #database {
-	float: left;
-	color: white;
-	font-family: Oxygen, Arial, sans-serif;
-	margin-top: 500px;
-	margin-left: 5%;
+article {
+	font-family: Oxygen;
+	margin: 0 5vw;
+	font-size: 2rem;
+}
+
+article li {
+	list-style-type: none;
 }
 
 /* Footer Styles */

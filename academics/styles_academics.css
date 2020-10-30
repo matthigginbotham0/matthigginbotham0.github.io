@@ -6,17 +6,11 @@
  * https://htmlcolorcodes.com/color-picker/
  */
  
- /* Importing web fonts */
+/* Importing web fonts */
  
- @font-face {
-	font-family: Oswald;
-	src: url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
- }
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
  
- @font-face {
-	 font-family: Oxygen;
-	 src: url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
- }
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 
 /* Body Style */
@@ -121,16 +115,14 @@ nav a:hover{
 /* Header styles */
 
 header {
-	position: block;
+	position: static;
 	margin: 0px;
-	min-width: 100%;
 }
 
 header #title {
 	color: white;
-	position: absolute;
-	padding-left: 5%;
-	padding-top: 45px;
+	padding-left: 5vw;
+	padding-top: 4em;
 }
 
 header h1 {
@@ -148,18 +140,62 @@ header h2 {
 	letter-spacing: 0.1em;
 }
  
+hr {
+	margin: 4em 5vw; 
+	width: 90vw;
+}
  
 /* Section Styles */
-#course_links {
-	display: block;
+#course_links_container {
+	position: static;
 	color: white;
 	font-family: Oxygen, Arial, sans-serif;
-	margin: 0;
-	margin-left: 5%;
+	margin-left: 5vw;
 }
-#course_links *
+
+#course_links_container p {
+	font-size: 1.5em;
+}
+
+#course_links_container h2 {
+	font-size: 3em;
+}
+
+#links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#links li {
+	font-size: 1.5rem;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
+	width: 10em;
+	margin: 1em;
+	padding: 0.5em 0;
+	list-style-type: none;
+	justify-content: center;
+	background-color: #1A445F;
+	box-shadow: 5px 5px 15px black;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#links li:hover {
+	transition: 1s ease;
+	background-color: #DC9136;
+}
+
+#course_links_container *
 {
-	margin: 0;
+	color: white;
+	text-decoration: none;
+}
+
+#contents > li{
+	font-size: 2em;
+	padding: 0.5em 0;
+	list-style-type: none;
 }
 
 /* Footer Styles */
