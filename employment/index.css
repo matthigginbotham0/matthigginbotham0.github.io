@@ -1,0 +1,132 @@
+/* 
+ * CSS file used with employment webpage
+ * AUTHOR: Matthew Higginbotham
+ * DATE:   October 26, 2020
+ *
+ * https://htmlcolorcodes.com/color-picker/
+ */
+ 
+ /* Importing web fonts */
+ 
+ @font-face {
+	font-family: Oswald;
+	src: url("../fonts/Oswald.ttf");
+ }
+ 
+ @font-face {
+	 font-family: Oxygen;
+	 src: url("../fonts/Oxygen-regular.ttf");
+ }
+ 
+ /* Body styles */
+ 
+body {
+	background-image: url('uniform.png');
+	background-color: rgb(220, 220, 200);
+	margin: 0px;
+	padding: 0px;
+	max-width: 2560px;
+}
+ 
+ /* Nav Bar Styles */
+ nav {
+	background-color: rgb(40, 40, 40);
+	box-shadow: 5px 5px 5px #101010;
+	position: fixed;
+	float: left;
+	z-index: 1;
+	
+	border: 0px;
+	margin: 0px;
+	padding: 0em;
+	height: 3em;
+	width: 100%;
+}
+
+nav a {
+	font-family: Oxygen;
+	color: rgb(255, 255, 255);
+	background-color: rgb(40, 40, 40);
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	transition: 1s ease;	
+}	
+
+nav > a, nav > div > a {
+	float: left;
+	display: block;
+	padding: 1em 0em;
+	width: 33.33%;
+}
+
+nav a:hover{
+	background-color: rgb(0, 0, 0);
+	text-shadow: 2px 2px 15px rgb(255, 255, 255);
+}
+
+.dropdown_container a {
+	float: left;
+}
+
+.dropdown_contents {
+	box-shadow: 5px 5px 5px #101010;
+	display: none;
+	float: right;
+	position: relative;
+	width: 33.33%;
+}
+
+.dropdown_contents a{
+	padding: 1em 0em;
+	width: 100%;
+}
+
+.dropdown_container:hover .dropdown_contents{
+	display: block;
+}
+ 
+ 
+/* Header styles */
+
+header {
+	position: absolute;
+	margin: 0px;
+	min-width: 100%;
+}
+
+header #title {
+	color: black;
+	float: left;
+	position: absolute;
+	padding-left: 5%;
+	padding-top: 45px;
+}
+
+header h1 {
+	font-family: Oswald, Arial, sans-serif;
+	font-size: 400%;
+	font-weight: bold;
+	text-shadow: 1px 1px rgb(128, 128, 128);
+	letter-spacing: 0.15em;
+	line-height: 1.3em;
+}
+
+header h2 {
+	font-family: Oxygen, Arial, sans-serif;
+	font-size: 130%;
+	letter-spacing: 0.1em;
+}
+ 
+ 
+/* Section Styles */
+
+div #database {
+	float: left;
+	color: white;
+	font-family: Oxygen, Arial, sans-serif;
+	margin-top: 500px;
+	margin-left: 5%;
+}
+
+/* Footer Styles */
