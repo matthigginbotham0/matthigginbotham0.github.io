@@ -6,6 +6,7 @@
  * https://htmlcolorcodes.com/color-picker/
  */
  
+ 
 /* Importing web fonts */
  
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
@@ -14,6 +15,7 @@
 
 
 /* Body Style */
+
 body {
 	background-image: url('sunset.png');
 	font-family: Oxygen, Arial, sans-serif;
@@ -23,6 +25,7 @@ body {
 
 
 /* Nav Bar Styles */
+
 nav {
 	position: fixed;
 	display: flex;
@@ -111,7 +114,7 @@ nav a:hover{
   }
 }
  
- 
+
 /* Header styles */
 
 header {
@@ -145,7 +148,9 @@ hr {
 	width: 90vw;
 }
  
+
 /* Section Styles */
+
 #course_links_container {
 	position: static;
 	color: white;
@@ -153,21 +158,30 @@ hr {
 	margin-left: 5vw;
 }
 
+#course_links_container *
+{
+	font-family: Oxygen, Arial, sans-serif;
+	color: white;
+	text-decoration: none;
+}
+
 #course_links_container p {
 	font-size: 1.5em;
 }
 
 #course_links_container h2 {
+	margin: 0.5em;
 	font-size: 3em;
 }
 
-#links {
+#buttons {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	list-style-type: none;
 }
 
-#links li {
+#buttons button {
 	font-size: 1.5rem;
 	text-align: center;
 	text-shadow: 2px 2px 2px black;
@@ -178,24 +192,18 @@ hr {
 	justify-content: center;
 	background-color: #1A445F;
 	box-shadow: 5px 5px 15px black;
+	outline: 0;
 	border-radius: 5px 5px 5px 5px;
 }
 
-#links li:hover {
+#buttons button:hover {
 	transition: 1s ease;
-	background-color: #DC9136;
 }
 
-#course_links_container *
-{
-	color: white;
-	text-decoration: none;
-}
-
-#contents > li{
-	font-size: 2em;
+.course_contents {
 	padding: 0.5em 0;
-	list-style-type: none;
 }
 
-/* Footer Styles */
+.course_contents div {
+	display: none;
+}

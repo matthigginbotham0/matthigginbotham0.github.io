@@ -11,6 +11,31 @@
 		<meta charset="UTF-8"/>
 		<title>Matthew Higginbotham - Academics</title>
 		<link href="styles_academics.css" rel="stylesheet" />
+
+		<!-- Importing jQuery from Google. -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		
+		<script type="text/javascript">
+		
+		$(document).ready(function() {
+
+		/* Hides content for a given button and toggles color based on selected val. */
+			$("#buttons button").not(this).click(function() {
+				var courseContents = document.getElementsByClassName($(this).attr("class"));
+				
+				if($(courseContents[1]).is(":visible")) {
+					$(courseContents).not(this).hide();
+					$(this).css("background-color", "#1A445F");
+				} else {
+					$(courseContents).show();
+					$(this).css("background-color", "#DC9136"); 
+				}
+			});
+		});
+		</script>
+		
+
 	</head>
 	
 	<body>
@@ -37,156 +62,164 @@
 		<hr>
 		
 		<div id="course_links_container">
-			<p>n.b.: This is not a comprehensive list.<br>
+			<p>n.b.: <b>This is not a comprehensive list.</b><br>
 			   My goal is to eventually make this into an interactive database.<br>
-			   For now, feel free to use this as a demo for internal linking.<br>
+			   For now, feel free to use this as a demo for JavaScript/jQuery and filtering.<br>
+			   Click the course topics that you wish to see displayed.<br>
 			</p>
 
-			<ul id="links">
-				<li><a href="#ART">Art</a></li>
-				<li><a href="#BIOL">Biology</a></li>
-				<li><a href="#CSCI">Computer Science</a></li>
-				<li><a href="#ENGL">English</a></li>
-				<li><a href="#HSM">Health Services Management</a></li>
-				<li><a href="#LING">Linguistics</a></li>
-				<li><a href="#MATH">Math</a></li>
-				<li><a href="#MUSC">Music</a></li>
-				<li><a href="#PHIL">Philosophy</a></li>
-				<li><a href="#PSYC">Psychology</a></li>
-			</ul id="links">
+			<div id="buttons">
+				<button type="button" class="CSCI">Computer Science</button>
+				<button type="button" class="ENGL">English</button>
+				<button type="button" class="HSM">Health Services Management</button>
+				<button type="button" class="HONS">Honors College</button>
+				<button type="button" class="MATH">Math</button>
+				<button type="button" class="MUSC">Music</button>
+				<button type="button" class="PHIL">Philosophy</button>
+				<button type="button" class="PSYC">Psychology</button>
+			</div>
 			
-		<hr>
+			<hr>
 			
 			<h2>Courses</h2>
-			<ul id="contents">
-				<li><a id="ART">Art</a></li>
-				<ul>
-					<li>Chemistry and Art</li>
-				</ul>
 
-				<li><a id="BIOL">Biology</a></li>
-				<ul>
-				<li>Biology I</li>
-				<li>Biology II</li>
-				</ul>
+			<div class="course_contents">
+				<div class="CSCI">
+					<h3>Computer Science</h3>
+						<ul>
+							<li>Intro to Computer Science I</li>
+							<li>Intro to Software Packages</li>
+							<li>Intro to Computer Organization</li>
+							<li>Intro to Computer Science II</li>
+							<li>Intro to Object-Oriented Des.</li>
+							<li>Numerical Methods I</li>
+							<li>Advanced Data Structures and Algorithms</li>
+							<li>Database Management Systems</li>
+							<li>Fundamentals of Artificial Intelligence</li>
+							<li>Formal Language Theory</li>
+							<li>Introduction to Machine Learning</li>
+							<li>Software Engineering I</li>
+							<li>Software Engineering II</li>
+							<li>Structure of Programming Languages</li>
+							<li>Computer Organization and Architecture</li>
+							<li>Intro to Web Programming</li>
+							<li>Advanced Database Management</li>
+							<li>Operating System Management II</li>
+							<li>Computer Science Seminar</li>
+						</ul>
+					</div>
 
-				<li><a id="CSCI">Computer Science</a></li>
-				<ul>
-					<li>Intro to Computer Science I</li>
-					<li>Intro to Software Packages</li>
-					<li>Intro to Computer Organization</li>
-					<li>Intro to Computer Science II</li>
-					<li>Intro to Object-Oriented Des.</li>
-					<li>Numerical Methods I</li>
-					<li>Advanced Data Structures and Algorithms</li>
-					<li>Database Management Systems</li>
-					<li>Fundamentals of Artificial Intelligence</li>
-					<li>Formal Language Theory</li>
-					<li>Introduction to Machine Learning</li>
-					<li>Software Engineering I</li>
-					<li>Software Engineering II</li>
-					<li>Structure of Programming Languages</li>
-					<li>Computer Organization and Architecture</li>
-					<li>Intro to Web Programming</li>
-					<li>Advanced Database Management</li>
-					<li>Operating System Management II</li>
-					<li>Computer Science Seminar</li>
-				</ul>
+				<div class="ENGL">
+					<h3>English</h3>
+					<ul>
+						<li>English Composition I</li>
+						<li>English Composition II</li>
+						<li>Professional Writing Workshop</li>
+						<li>Vikings: Warrior-Poets</li>
+					</ul>
+				</div>
 
-				<li><a id="ENGL">English</a></li>
-				<ul>
-					<li>English Composition I</li>
-					<li>English Composition II</li>
-					<li>Professional Writing Workshop</li>
-					<li>Vikings: Warrior-Poets</li>
-					<li>Arthurian Legend</li>	
-				</ul>
-
-				<li><a id="HSM">Health Services Management</a></li>
-				<ul>
-					<li>Health Data Management</li>
-					<li>Health Informatics</li>	
-				</ul>
-
-				<li><a id="LING">Linguistics</a></li>
-				<ul>
-					<li>The Role of Language</li>	
-				</ul>
-				
-				<li><a id="MATH">Math</a></li>
-				<ul>
-					<li>Discrete Mathematics</li>
-					<li>Calculus I</li>
-					<li>Calculus II</li>
-					<li>Multivariable Calculus</li>
-					<li>Intro to Linear Algebra</li>
-					<li>Differential Equations</li>
-					<li>Linear Algebra and Matrix Theory</li>
-					<li>Mathematical Statistics and Probability I</li>
-				</ul>
-
-				<li><a id="MUSC">Music</a></li>
-				<ul>
-					<li>University Chorale</li>
-						<li>University Chorus</li>
-						<li>Opera Workshop</li>
-						<li>Vocal Chamber Ensemble</li>
-						<li>Men's Ensemble</li>
-						<li>Chamber Ensemble</li>
-						<li>French Diction and Repertoire</li>
+				<div class="HSM">
+					<h3>Health Services Management</h3>
+					<ul>
+						<li>Health Data Management</li>
+						<li>Health Informatics</li>	
+					</ul>
+				</div>
+					
+				<div class="HONS">
+					<h3>Honors College</h3>
+					<ul>
+						<li>Chemistry and Art</li>
+						<li>Arthurian Legend</li>
+						<li>The Self and the Good Life</li>
+						<li>Honors Thesis</li>
+						<li>The Role of Language</li>
+						<li>Intro to Linear Algebra</li>
 						<li>Making Shakespeare Into Opera</li>
-						<li>History of Western Art Music I</li>
-						<li>History of Western Art Music II</li>
-						<li>Recital Hour</li>
-						<li>Freshman Voice Lab</li>
-						<li>Essentials of Conducting</li>
-						<li>Choral Conducting</li>
-						<li>Guitar Concepts I</li>
-						<li>Guitar Concepts II</li>
-						<li>Guitar Concepts III</li>
-						<li>Private Piano</li>
-						<li>Private Voice</li>
-						<li>Senior Voice Recital</li>
-						<li>Music Theory I</li>
-						<li>Music Theory II</li>
-						<li>Music Theory III</li>
-						<li>Songwriting</li>
-						<li>Introduction and Definition of Music Therapy</li>
-						<li>Physical Disabilities</li>
-						<li>Field Studies</li>
-						<li>Intellectual and Developmental Disabilities</li>
-						<li>Childhood Disorders</li>
-						<li>Gerontology</li>
-						<li>Adulthood Disorders</li>
-						<li>Field Studies</li>
-						<li>Improvisation and Physiology</li>
-						<li>Affective and Perceptual Response</li>
-						<li>Music Therapy Internship</li>
-				</ul>
-				<li><a id="PHIL">Philosophy</a></li>
-				<ul>
-					<li>Ethics in the Sciences</li>
-					<li>Philosophy of Psychopathology</li>
-				</ul>
+						<li>Philosophy of Psychopathology</li>
+						<li>Psychobiology of Sexuality</li>
+						<li>Making Religion Into Art</li>
+					</ul>
+				</div>
 
+				<div class="MATH">
+					<h3>Mathematics</h3>
+					<ul>
+						<li>Discrete Mathematics</li>
+						<li>Calculus I</li>
+						<li>Calculus II</li>
+						<li>Multivariable Calculus</li>
+						<li>Intro to Linear Algebra</li>
+						<li>Differential Equations</li>
+						<li>Linear Algebra and Matrix Theory</li>
+						<li>Mathematical Statistics and Probability I</li>
+					</ul>
+				</div>
 
-				<li><a id="PSYC">Psychology</a></li>
-				<ul>
-					<li>Introduction to Psychology</li>
-					<li>Developmental Psychology</li>
-					<li>Abnormal Psychology</li>
-					<li>Psychobiology of Sexuality</li>
-					<li>Introduction to Research</li>
-					<li>Statistics and Methods</li>
-					<li>Physiological Psychology</li>
-					<li>Cognition</li>
-				</ul>
-			</ul>
+				<div class="MUSC">
+					<h3>Music</h3>
+					<ul>
+						<li>University Chorale</li>
+							<li>University Chorus</li>
+							<li>Opera Workshop</li>
+							<li>Vocal Chamber Ensemble</li>
+							<li>Men's Ensemble</li>
+							<li>Chamber Ensemble</li>
+							<li>French Diction and Repertoire</li>
+							<li>Making Shakespeare Into Opera</li>
+							<li>History of Western Art Music I</li>
+							<li>History of Western Art Music II</li>
+							<li>Recital Hour</li>
+							<li>Freshman Voice Lab</li>
+							<li>Essentials of Conducting</li>
+							<li>Choral Conducting</li>
+							<li>Guitar Concepts I</li>
+							<li>Guitar Concepts II</li>
+							<li>Guitar Concepts III</li>
+							<li>Private Piano</li>
+							<li>Private Voice</li>
+							<li>Senior Voice Recital</li>
+							<li>Music Theory I</li>
+							<li>Music Theory II</li>
+							<li>Music Theory III</li>
+							<li>Songwriting</li>
+							<li>Introduction and Definition of Music Therapy</li>
+							<li>Physical Disabilities</li>
+							<li>Field Studies</li>
+							<li>Intellectual and Developmental Disabilities</li>
+							<li>Childhood Disorders</li>
+							<li>Gerontology</li>
+							<li>Adulthood Disorders</li>
+							<li>Field Studies</li>
+							<li>Improvisation and Physiology</li>
+							<li>Affective and Perceptual Response</li>
+							<li>Music Therapy Internship</li>
+					</ul>
+				</div>
+
+				<div class="PHIL">
+					<h3>Philosophy</h3>
+					<ul>
+						<li>Christian Ethics</li>
+						<li>Ethics in the Sciences</li>
+					</ul>
+				</div>
+
+				<div class="PSYC">
+					<h3>Psychology</h3>
+					<ul>
+						<li>Introduction to Psychology</li>
+						<li>Developmental Psychology</li>
+						<li>Abnormal Psychology</li>
+						<li>Psychobiology of Sexuality</li>
+						<li>Introduction to Research</li>
+						<li>Statistics and Methods</li>
+						<li>Physiological Psychology</li>
+						<li>Cognition</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-
-	<footer>
-		<br>
-	</footer>
-		
 	</body>
 </html>

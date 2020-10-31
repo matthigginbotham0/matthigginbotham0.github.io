@@ -12,6 +12,7 @@
  
  @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
  
+
  /* Body styles */
  
 body {
@@ -22,6 +23,15 @@ body {
 	max-width: 2560px;
 }
  
+
+/* Adjustment added to anchors for fixed nav bar */
+
+article a {
+	margin-top: -2em;
+	padding-top: 2em;
+}
+
+
  /* Nav Bar Styles */
  nav {
 	background-color: rgb(40, 40, 40);
@@ -95,16 +105,16 @@ header #title {
 
 header h1 {
 	font-family: Oswald, Arial, sans-serif;
-	font-size: 400%;
+	font-size: 4em;
 	font-weight: bold;
 	text-shadow: 1px 1px rgb(128, 128, 128);
 	letter-spacing: 0.15em;
 	line-height: 1.3em;
 }
 
-header h2 {
+header p {
 	font-family: Oxygen, Arial, sans-serif;
-	font-size: 130%;
+	font-size: 1.3rem;
 	letter-spacing: 0.1em;
 }
  
@@ -113,6 +123,7 @@ hr {
 	width: 90vw;
 }
  
+
 /* Section Styles */
 
 article {
@@ -121,8 +132,19 @@ article {
 	font-size: 2rem;
 }
 
-article li {
-	list-style-type: none;
+article h2 {
+	text-shadow: 2px 2px 5px #333333;
 }
 
-/* Footer Styles */
+article h3 {
+	margin-bottom: 0;
+}
+
+article h4 {
+	margin-top: 0;
+	font-style: italic;
+}
+
+article p {
+	font-size: 1rem;
+}

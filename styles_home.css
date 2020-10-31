@@ -21,7 +21,6 @@ body {
 	margin: 0;
 }
 
-
 /* Nav Bar Styles */
 nav {
 	position: fixed;
@@ -111,7 +110,6 @@ nav a:hover{
   }
 }
 
-
 /* Header Styles */
 header {
 	position: static;
@@ -200,7 +198,6 @@ header {
 	}
 }
 
-
 /* Column Content Styles */
 article {
 	position: static;
@@ -264,7 +261,6 @@ article section ul {
 		margin: 0.5em;
 	}
 }
-
 
 /* Footer Styles */
 
