@@ -15,12 +15,9 @@
 		<!-- Importing jQuery from Google. -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-		
 		<script type="text/javascript">
-		
 		$(document).ready(function() {
-
-		/* Hides content for a given button and toggles color based on selected val. */
+			/* Hides content for a given button and toggles color based on selected val. */
 			$("#buttons button").not(this).click(function() {
 				var courseContents = document.getElementsByClassName($(this).attr("class"));
 				
@@ -36,6 +33,14 @@
 		</script>
 		
 
+		<style type="text/css">
+			body {
+				background-image: url('sunset.png');
+				font-family: Oxygen, Arial, sans-serif;
+				background-color: rgb(220, 220, 200);
+				margin: 0;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -63,7 +68,7 @@
 		
 		<div id="course_links_container">
 			<p>n.b.: <b>This is not a comprehensive list.</b><br>
-			   My goal is to eventually make this into an interactive database.<br>
+			   My goal is to eventually make this into an interactive database via php.<br>
 			   For now, feel free to use this as a demo for JavaScript/jQuery and filtering.<br>
 			   Click the course topics that you wish to see displayed.<br>
 			</p>

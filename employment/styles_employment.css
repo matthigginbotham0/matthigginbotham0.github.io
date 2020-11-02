@@ -13,17 +13,9 @@
  @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
  
 
- /* Body styles */
- 
-body {
-	background-image: url('uniform.png');
-	background-color: rgb(220, 220, 200);
-	margin: 0px;
-	padding: 0px;
-	max-width: 2560px;
-}
- 
+ /* Body Styles relegated to HTML file so all image links are in one spot */
 
+ 
 /* Adjustment added to anchors for fixed nav bar */
 
 article a {
