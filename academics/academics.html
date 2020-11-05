@@ -27,7 +27,7 @@
 					$(".course_contents ." + myClass).show();
 					$("label." + myClass).css("background-color", "#DC9136");
 				} else {
-					$(".course_contents *").not(this).hide();
+					$(".course_contents ." + myClass).not(this).hide();
 					$("label." + myClass).css("background-color", "#1A445F");
 				}
 			});
