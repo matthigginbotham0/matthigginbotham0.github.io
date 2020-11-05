@@ -141,7 +141,7 @@ header {
 
 #names h2 {
 	font-family: Oxygen, Tahoma, sans-serif;
-	color: #222222, rgba(0, 0, 0, 0.85);
+	color: #222222;
 	font-size: 1.5rem;
 }
 
@@ -151,7 +151,8 @@ header {
 	line-height: 1.5em;
 	letter-spacing: 0.05em;
 	font-weight: bold;
-	background-color: #e6dcff, rgba(230,220,255, 0.6);
+	background-color: #e6dcff; /* Fallback Color */
+	background-color: rgba(230,220,255, 0.6);
 	box-shadow: 5px 5px 25px #000000;
 	border-radius: 20px;
 	padding: 0 3em;
