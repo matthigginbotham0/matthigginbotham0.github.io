@@ -2,26 +2,27 @@
  * CSS file used with employment webpage
  * AUTHOR: Matthew Higginbotham
  * DATE:   October 26, 2020
- *
- * https://htmlcolorcodes.com/color-picker/
  */
  
- /* Importing web fonts */
+/* Importing web fonts */
  
- @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
  
- @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
  
 
- /* Body Styles relegated to HTML file so all image links are in one spot */
+/* Body Styles 
+ * Background file relegated to HTML file so all image links are in one spot */
+
 body {
 	font-family: Oxygen, Arial, sans-serif;
-	background-color: rgb(170, 170, 200);
 	font-size: 16px;
+	background-color: rgb(170, 170, 200);
 	margin: 0;
 }
  
-/* Adjustment added to anchors for fixed nav bar */
+
+/* Adjustment added to anchors so internal links don't run into nav bar */
 
 article a {
 	margin-top: -2em;
@@ -34,18 +35,16 @@ article a {
 	background-color: rgb(40, 40, 40);
 	box-shadow: 5px 5px 5px #101010;
 	position: fixed;
-	float: left;
-	z-index: 1;
-	
-	border: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0;
-	padding: 0em;
+	padding: 0;
 	height: 3em;
-	width: 100%;
+	width: 100vw;
 }
 
 nav a {
-	font-family: Oxygen;
 	color: rgb(255, 255, 255);
 	background-color: rgb(40, 40, 40);
 	text-transform: uppercase;
@@ -55,46 +54,78 @@ nav a {
 }	
 
 nav > a, nav > div > a {
-	float: left;
 	display: block;
-	padding: 1em 0em;
-	width: 33.33%;
+	float: left;
+
+	padding: 1em 0;
+	width: 33.33vw;
 }
 
+/* Changes appearance of links once hovered over */
 nav a:hover{
 	background-color: rgb(0, 0, 0);
 	text-shadow: 2px 2px 15px rgb(255, 255, 255);
 }
 
+/* Equalixes size of dropdown nav bar elements */
 .dropdown_container a {
 	float: left;
 }
 
+/* Hides content until hovered */
 .dropdown_contents {
 	box-shadow: 5px 5px 5px #101010;
+	position: absolute; /* prevents overlapping with nav-bar */
 	display: none;
-	float: right;
-	position: relative;
-	width: 33.33%;
+	margin-top: 3em;
+	width: 33.33vw;
 }
 
 .dropdown_contents a{
-	padding: 1em 0em;
+	padding: 1em 0;
 	width: 100%;
 }
 
+/* Actually displays the dropdown */
 .dropdown_container:hover .dropdown_contents{
 	display: block;
+}
+
+/* Adjusts content once a certain width is reached */
+@media (max-width: 800px) {
+	nav {
+		flex-direction: column;
+		position: absolute;
+		height: 9em;
+	}
+  
+	nav > a {
+		padding: 0.9em 100vw;
+	}
+  
+	nav > div > a {
+		padding: 0.8em 100vw;
+	}
+  
+  .dropdown_contents a {
+	position: static;
+	justify-content: center;
+	width: 100vw;
+  }
+  
+  .dropdown_container:hover .dropdown_contents{
+	display: none;
+  }
 }
  
  
 /* Header styles */
 
 header {
-	position: static;
-	padding-bottom: 3em;
-	border: 5px;
 	box-shadow: 0 0, 0 0, 5px 5px 10px #333333;
+	position: static;
+	border: 5px;
+	padding-bottom: 3em;
 }
 
 header #title {
@@ -113,21 +144,19 @@ header h1 {
 }
 
 header p {
-	font-family: Oxygen, Arial, sans-serif;
 	font-size: 1.3rem;
 	letter-spacing: 0.1em;
-}
- 
-hr {
-	margin: 4em 5vw; 
-	width: 90vw;
 }
  
 
 /* Section Styles */
 
+hr {
+	margin: 4em 5vw; 
+	width: 90vw;
+}
+
 article {
-	font-family: Oxygen;
 	margin: 0 5vw;
 	font-size: 2rem;
 }

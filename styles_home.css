@@ -2,32 +2,35 @@
  * CSS file used with home webpage
  * AUTHOR: Matthew Higginbotham
  * DATE:   October 26, 2020
- *
- * https://htmlcolorcodes.com/color-picker/
  */
  
- /* Importing web fonts */
+/* Importing web fonts */
  
- @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
  
- @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
  
 
-/* Body Styles relegated to HTML file so all image links are in one spot */
+/* Body Styles 
+ * Background file relegated to HTML file so all image links are in one spot */
+
+body {
+	font-family: Oxygen, Tahoma, sans-serif;
+	font-size: 16px;
+	background-color: rgb(220, 220, 200);
+	margin: 0;
+}
 
 
 /* Nav Bar Styles */
+
 nav {
-	position: fixed;
-	display: flex;
-	
 	background-color: rgb(40, 40, 40);
 	box-shadow: 5px 5px 5px #101010;
-	
-	z-index: 1;
+	position: fixed;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	
 	margin: 0;
 	padding: 0;
 	height: 3em;
@@ -35,7 +38,6 @@ nav {
 }
 
 nav a {
-	font-family: Oxygen, Tahoma, sans-serif;
 	color: rgb(255, 255, 255);
 	background-color: rgb(40, 40, 40);
 	text-transform: uppercase;
@@ -45,45 +47,49 @@ nav a {
 }	
 
 nav > a, nav > div > a {
-	float: left;
 	display: block;
+	float: left;
+
 	padding: 1em 0;
 	width: 33.33vw;
 }
 
+/* Changes appearance of links once hovered over */
 nav a:hover{
 	background-color: rgb(0, 0, 0);
 	text-shadow: 2px 2px 15px rgb(255, 255, 255);
 }
 
+/* Equalixes size of dropdown nav bar elements */
 .dropdown_container a {
 	float: left;
 }
 
+/* Hides content until hovered */
 .dropdown_contents {
 	box-shadow: 5px 5px 5px #101010;
+	position: absolute; /* prevents overlapping with nav-bar */
 	display: none;
-	position: absolute;
 	margin-top: 3em;
 	width: 33.33vw;
 }
 
 .dropdown_contents a{
-	padding: 1em 0em;
+	padding: 1em 0;
 	width: 100%;
 }
 
+/* Actually displays the dropdown */
 .dropdown_container:hover .dropdown_contents{
 	display: block;
-	transition: 1s ease;
 }
 
-/* Adjusts content once certain width is reached */
+/* Adjusts content once a certain width is reached */
 @media (max-width: 800px) {
 	nav {
+		flex-direction: column;
 		position: absolute;
 		height: 9em;
-		flex-direction: column;
 	}
   
 	nav > a {
@@ -95,8 +101,8 @@ nav a:hover{
 	}
   
   .dropdown_contents a {
-	justify-content: center;
 	position: static;
+	justify-content: center;
 	width: 100vw;
   }
   
@@ -105,7 +111,9 @@ nav a:hover{
   }
 }
 
+
 /* Header Styles */
+
 header {
 	position: static;
 	display: flex;
@@ -117,11 +125,11 @@ header {
 }
 
 #name_banner {
-	width: 80vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	width: 80vw;
 }
 
 #name_banner img {
@@ -140,25 +148,25 @@ header {
 }
 
 #names h2 {
-	font-family: Oxygen, Tahoma, sans-serif;
 	color: #222222;
 	font-size: 1.5rem;
 }
 
 #about_me {
+	background-color: #e6dcff; /* Fallback Color */
+	background-color: rgba(230,220,255, 0.6);
+	font-weight: bold;
 	text-align: center;
 	align-items: center;
 	line-height: 1.5em;
 	letter-spacing: 0.05em;
-	font-weight: bold;
-	background-color: #e6dcff; /* Fallback Color */
-	background-color: rgba(230,220,255, 0.6);
 	box-shadow: 5px 5px 25px #000000;
 	border-radius: 20px;
 	padding: 0 3em;
 	margin: 2em 0;
 }
 
+/* Adjusts positioning of elements if window gets too small */
 @media (max-width: 800px) {
 	header {
 		display: flex;
@@ -194,24 +202,25 @@ header {
 	}
 }
 
+
 /* Column Content Styles */
+
 article {
+	text-shadow: 1px 1px 10px rgb(128, 128, 128);
 	position: static;
 	display: flex;
 	justify-content: center;
 	margin: 0;
 	padding: 0;
-	
 	width: 100vw;
-	text-shadow: 1px 1px 10px rgb(128, 128, 128);
 }
 
 article h4 {
-	margin: 0;
-	padding: 0;
 	font-size: 0.7em;
 	font-weight: normal;
 	text-shadow: none;
+	margin: 0;
+	padding: 0;
 }
 
 article a {
@@ -219,12 +228,12 @@ article a {
 }
 
 article section {
+	font-size: 1.75rem;
 	text-align: center;
 	flex-flow: column;
 	display: flex;
-	font-size: 1.75rem;
-	width: 33.33vw;
 	min-height: 4em;
+	width: 33.33vw;
 }
 
 article section h3{
@@ -232,13 +241,13 @@ article section h3{
 }
 
 article section ul {
-
+	text-shadow: 2px 2px 2px #999999;
 	list-style-type: none;
 	margin: 0.5em;
 	padding: 0;
-	text-shadow: 2px 2px 2px #999999;
 }
 
+/* Each column needs its own color specified */
 #column1 {
 	color: rgb(0, 32, 48);
 	background-color: rgb(73, 177, 198);
@@ -254,6 +263,7 @@ article section ul {
 	background-color: rgb(246, 202, 131);
 }
 
+/* Arranges columns to a list if viewport too small */
 @media (max-width: 800px) {
 	article {
 		flex-direction: column;
@@ -269,16 +279,15 @@ article section ul {
 	}
 }
 
+
 /* Footer Styles */
 
 footer {
-	position: static;
-	display: block;
-	
 	text-align: center;
 	background-color: rgb(10, 10, 10);
 	color: rgb(250, 250, 250);
-	
+	position: static;
+	display: block;
 	margin: 0;
 	padding: 0.5em 0.5em;
 }
@@ -299,8 +308,6 @@ footer p {
 
 @media (max-width: 800px) {
 	footer {
-		
-		padding: 1em 1em 2em 1em;
-		
+		padding: 1em 1em 2em 1em;	
 	}
 }

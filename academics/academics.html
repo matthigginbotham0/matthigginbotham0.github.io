@@ -6,11 +6,19 @@
 		DATE:   October 26, 2020
 		
 		This site was created pursuant to a final project for
-		McNeese State University's Web Development.
+		McNeese State University's CSCI 426 - Intro to Web Programming.
+		This is the ACADEMICS page.
 		-->
 		<meta charset="UTF-8"/>
 		<title>Matthew Higginbotham - Academics</title>
 		<link href="styles_academics.css" rel="stylesheet" />
+
+		<!-- Moved here from .css file to keep file names all in one document.-->
+		<style type="text/css">
+			header {
+				background-image: url('sunset.png');
+			}
+		</style>
 
 		<!-- Importing jQuery from Google. -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -33,16 +41,12 @@
 			});
 		});
 		</script>
-		
-		<!-- Moved here from .css file to keep file names all in one document.-->
-		<style type="text/css">
-			header {
-				background-image: url('sunset.png');
-			}
-		</style>
 	</head>
 	
+
 	<body>
+
+		<!-- Elements for nav bar with internal links -->
 		<nav>
 			<a href="">Academics</a>
 			<a href="../index.html">Home</a>
@@ -56,6 +60,7 @@
 			</div>
 		</nav>
 	
+		<!-- Header banner -->
 		<header>
 			<div id="title">
 				<h1>Academics</h1>
@@ -63,14 +68,16 @@
 			</div>
 		</header>
 		
+		<!-- A container that allows for user interactibility. -->
 		<div id="course_links_container">
 			<p>Note - <b>This is not a comprehensive list.</b><br>
 			   My goal is to eventually make this into an interactive database via php.<br>
 			   For now, feel free to use this as a demo for JavaScript/jQuery and filtering.<br>
 			</p>
+
 			<h2 style="text-align: center; padding: 1em">Click on the course topics that you wish to see displayed.<br>Scroll down to see them listed.</h2>
 	
-
+			<!-- A div that contains all of the checkboxes for course options.-->
 			<div id="checkboxes">
 				<label class="CSCI"><input type="checkbox">Computer Science</label>
 				<label class="ENGL"><input type="checkbox">English</label>
@@ -86,6 +93,8 @@
 			
 			<h2>Courses</h2>
 
+			<!-- A container that dynamically shows/hides contents based on above checkboxes.
+				 Will later be removed and placed elsewhere once php is implemeneted -->
 			<div class="course_contents">
 				<div class="CSCI">
 					<h3>Computer Science</h3>

@@ -2,10 +2,7 @@
  * CSS file used with academics webpage
  * AUTHOR: Matthew Higginbotham
  * DATE:   October 26, 2020
- *
- * https://htmlcolorcodes.com/color-picker/
  */
- 
  
 /* Importing web fonts */
  
@@ -14,7 +11,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 
-/* Body Styles  */
+/* Body Styles 
+ * Background file relegated to HTML file so all image links are in one spot */
 
 body {
 	font-family: Oxygen, Arial, sans-serif;
@@ -23,19 +21,16 @@ body {
 	margin: 0;
 }
 
+
 /* Nav Bar Styles */
 
 nav {
-	position: fixed;
-	display: flex;
-	
 	background-color: rgb(40, 40, 40);
 	box-shadow: 5px 5px 5px #101010;
-	
-	z-index: 1;
+	position: fixed;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	
 	margin: 0;
 	padding: 0;
 	height: 3em;
@@ -43,7 +38,6 @@ nav {
 }
 
 nav a {
-	font-family: Oxygen;
 	color: rgb(255, 255, 255);
 	background-color: rgb(40, 40, 40);
 	text-transform: uppercase;
@@ -53,25 +47,29 @@ nav a {
 }	
 
 nav > a, nav > div > a {
-	float: left;
 	display: block;
+	float: left;
+
 	padding: 1em 0;
 	width: 33.33vw;
 }
 
+/* Changes appearance of links once hovered over */
 nav a:hover{
 	background-color: rgb(0, 0, 0);
 	text-shadow: 2px 2px 15px rgb(255, 255, 255);
 }
 
+/* Equalixes size of dropdown nav bar elements */
 .dropdown_container a {
 	float: left;
 }
 
+/* Hides content until hovered */
 .dropdown_contents {
 	box-shadow: 5px 5px 5px #101010;
+	position: absolute; /* prevents overlapping with nav-bar */
 	display: none;
-	position: absolute;
 	margin-top: 3em;
 	width: 33.33vw;
 }
@@ -81,17 +79,17 @@ nav a:hover{
 	width: 100%;
 }
 
+/* Actually displays the dropdown */
 .dropdown_container:hover .dropdown_contents{
 	display: block;
-	transition: 1s ease;
 }
 
-/* Adjusts content once certain width is reached */
+/* Adjusts content once a certain width is reached */
 @media (max-width: 800px) {
 	nav {
+		flex-direction: column;
 		position: absolute;
 		height: 9em;
-		flex-direction: column;
 	}
   
 	nav > a {
@@ -103,8 +101,8 @@ nav a:hover{
 	}
   
   .dropdown_contents a {
-	justify-content: center;
 	position: static;
+	justify-content: center;
 	width: 100vw;
   }
   
@@ -117,10 +115,10 @@ nav a:hover{
 /* Header styles */
 
 header {
+	box-shadow: 0 0, 0 0, 5px 5px 10px #000000;
 	position: static;
 	margin: 0;
 	padding-bottom: 3em;
-	box-shadow: 0 0, 0 0, 5px 5px 10px #000000;
 }
 
 header #title {
@@ -139,23 +137,22 @@ header h1 {
 }
 
 header p {
-	font-family: Oxygen, Arial, sans-serif;
 	font-size: 1.3rem;
 	letter-spacing: 0.1em;
-}
- 
-hr {
-	margin: 4em 5vw; 
-	width: 90vw;
 }
  
 
 /* Section Styles */
 
+hr {
+	margin: 4em 5vw; 
+	width: 90vw;
+}
+
 #course_links_container {
-	position: static;
-	color: white;
 	font-family: Oxygen, Arial, sans-serif;
+	color: white;
+	position: static;
 	margin: 0 5vw;
 	padding-top: 1em;
 }
@@ -172,38 +169,41 @@ hr {
 }
 
 #course_links_container h2 {
-	margin: 0;
 	font-size: 3em;
+	margin: 0;
 }
 
+
+/* Styles for the checkbox "buttons" */
+
 #checkboxes {
+	font-size: 1.25rem;
+	text-align: center;
+	text-shadow: 2px 2px 2px black;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-
-	font-size: 1.25rem;
-	text-align: center;
-	text-shadow: 2px 2px 2px black;
-	
 }
 
 #checkboxes label{
+	background-color: #1A445F;
+	box-shadow: 3px 3px 5px black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 1em;
 	margin: 0.5rem;
-	border: 10px white;
+	padding: 1em;
 	border-radius: 5px;
-	box-shadow: 3px 3px 5px black;
 	transition: 0.5s ease-in;
-	background-color: #1A445F;
 }
 
 #checkboxes label input {
 	cursor: pointer;
 }
+
+
+/* Styles for dynamically displayed content */
 
 .course_contents {
 	padding: 0.5em 0;
