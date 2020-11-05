@@ -14,8 +14,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 
-/* Body Styles relegated to HTML file so all image links are in one spot */
+/* Body Styles  */
 
+body {
+	font-family: Oxygen, Arial, sans-serif;
+	font-size: 16px;
+	background-color: #05010e;
+	margin: 0;
+}
 
 /* Nav Bar Styles */
 
@@ -71,7 +77,7 @@ nav a:hover{
 }
 
 .dropdown_contents a{
-	padding: 1em 0em;
+	padding: 1em 0;
 	width: 100%;
 }
 
@@ -112,7 +118,9 @@ nav a:hover{
 
 header {
 	position: static;
-	margin: 0px;
+	margin: 0;
+	padding-bottom: 3em;
+	box-shadow: 0 0, 0 0, 5px 5px 10px #000000;
 }
 
 header #title {
@@ -123,16 +131,16 @@ header #title {
 
 header h1 {
 	font-family: Oswald, Arial, sans-serif;
-	font-size: 400%;
+	font-size: 4rem;
 	font-weight: bold;
 	text-shadow: 1px 1px rgb(128, 128, 128);
 	letter-spacing: 0.15em;
 	line-height: 1.3em;
 }
 
-header h2 {
+header p {
 	font-family: Oxygen, Arial, sans-serif;
-	font-size: 130%;
+	font-size: 1.3rem;
 	letter-spacing: 0.1em;
 }
  
@@ -148,7 +156,8 @@ hr {
 	position: static;
 	color: white;
 	font-family: Oxygen, Arial, sans-serif;
-	margin-left: 5vw;
+	margin: 0 5vw;
+	padding-top: 1em;
 }
 
 #course_links_container *
@@ -163,38 +172,49 @@ hr {
 }
 
 #course_links_container h2 {
-	margin: 0.5em;
+	margin: 0;
 	font-size: 3em;
 }
 
-#buttons {
+#checkboxes {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	list-style-type: none;
-}
+	justify-content: center;
 
-#buttons button {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	text-align: center;
 	text-shadow: 2px 2px 2px black;
-	width: 10em;
-	margin: 1em;
-	padding: 0.5em 0;
-	list-style-type: none;
-	justify-content: center;
-	background-color: #1A445F;
-	box-shadow: 5px 5px 15px black;
-	outline: 0;
-	border-radius: 5px 5px 5px 5px;
+	
 }
 
-#buttons button:hover {
-	transition: 1s ease;
+#checkboxes label{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	margin: 0.5rem;
+	border: 10px white;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px black;
+	transition: 0.5s ease-in;
+	background-color: #1A445F;
+}
+
+#checkboxes label input {
+	cursor: pointer;
 }
 
 .course_contents {
 	padding: 0.5em 0;
+}
+
+.course_contents div h3 {
+	font-size: 2rem;
+}
+
+.course_contents div ul {
+	font-size: 1.5rem;
 }
 
 .course_contents div {

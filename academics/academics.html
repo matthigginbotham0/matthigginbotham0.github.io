@@ -17,28 +17,27 @@
 
 		<script type="text/javascript">
 		$(document).ready(function() {
-			/* Hides content for a given button and toggles color based on selected val. */
-			$("#buttons button").not(this).click(function() {
-				var courseContents = document.getElementsByClassName($(this).attr("class"));
-				
-				if($(courseContents[1]).is(":visible")) {
-					$(courseContents).not(this).hide();
-					$(this).css("background-color", "#1A445F");
+			/* Hides content for a given input and toggles color based on selected val. */
+			$("#checkboxes label input").click(function() {
+				/* Selects the class of the checkbox clicked */
+				var myClass = $(this).parent().attr("class");
+
+				/* Toggles the .course_content element while changing background color */
+				if($(this).is(":checked")) {
+					$(".course_contents ." + myClass).show();
+					$("label." + myClass).css("background-color", "#DC9136");
 				} else {
-					$(courseContents).show();
-					$(this).css("background-color", "#DC9136"); 
+					$(".course_contents *").not(this).hide();
+					$("label." + myClass).css("background-color", "#1A445F");
 				}
 			});
 		});
 		</script>
 		
-
+		<!-- Moved here from .css file to keep file names all in one document.-->
 		<style type="text/css">
-			body {
-				background-image: url('sunset2.png');
-				font-family: Oxygen, Arial, sans-serif;
-				background-color: rgb(220, 220, 200);
-				margin: 0;
+			header {
+				background-image: url('sunset.png');
 			}
 		</style>
 	</head>
@@ -60,28 +59,27 @@
 		<header>
 			<div id="title">
 				<h1>Academics</h1>
-				<h2>Interested in the courses I've taken?</h2>
+				<p>Interested in the courses I've taken?</p>
 			</div>
 		</header>
-
-		<hr>
 		
 		<div id="course_links_container">
-			<p>n.b.: <b>This is not a comprehensive list.</b><br>
+			<p>Note - <b>This is not a comprehensive list.</b><br>
 			   My goal is to eventually make this into an interactive database via php.<br>
 			   For now, feel free to use this as a demo for JavaScript/jQuery and filtering.<br>
-			   Click the course topics that you wish to see displayed.<br>
 			</p>
+			<h2 style="text-align: center; padding: 1em">Click on the course topics that you wish to see displayed.<br>Scroll down to see them listed.</h2>
+	
 
-			<div id="buttons">
-				<button type="button" class="CSCI">Computer Science</button>
-				<button type="button" class="ENGL">English</button>
-				<button type="button" class="HSM">Health Services Management</button>
-				<button type="button" class="HONS">Honors College</button>
-				<button type="button" class="MATH">Math</button>
-				<button type="button" class="MUSC">Music</button>
-				<button type="button" class="PHIL">Philosophy</button>
-				<button type="button" class="PSYC">Psychology</button>
+			<div id="checkboxes">
+				<label class="CSCI"><input type="checkbox">Computer Science</label>
+				<label class="ENGL"><input type="checkbox">English</label>
+				<label class="HSM"><input type="checkbox">Health Services Management</label>
+				<label class="HONS"><input type="checkbox">Honors College</label>
+				<label class="MATH"><input type="checkbox">Math</label>
+				<label class="MUSC"><input type="checkbox">Music</label>
+				<label class="PHIL"><input type="checkbox">Philosophy</label>
+				<label class="PSYC"><input type="checkbox">Psychology</label>
 			</div>
 			
 			<hr>

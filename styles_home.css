@@ -141,7 +141,7 @@ header {
 
 #names h2 {
 	font-family: Oxygen, Tahoma, sans-serif;
-	color: rgba(0, 0, 0, 0.85);
+	color: #222222, rgba(0, 0, 0, 0.85);
 	font-size: 1.5rem;
 }
 
@@ -151,7 +151,7 @@ header {
 	line-height: 1.5em;
 	letter-spacing: 0.05em;
 	font-weight: bold;
-	background-color: rgba(230,220,255, 0.6);
+	background-color: #e6dcff, rgba(230,220,255, 0.6);
 	box-shadow: 5px 5px 25px #000000;
 	border-radius: 20px;
 	padding: 0 3em;
@@ -201,16 +201,27 @@ article {
 	margin: 0;
 	padding: 0;
 	
-	width: 100%;
+	width: 100vw;
 	text-shadow: 1px 1px 10px rgb(128, 128, 128);
+}
+
+article h4 {
+	margin: 0;
+	padding: 0;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+article a {
+	color: rgb(28, 8, 0);  /* Will need to be changed if links are added to other columns */
 }
 
 article section {
 	text-align: center;
 	flex-flow: column;
-	align-items: center;
 	display: flex;
-	font-size: 175%;
+	font-size: 1.75rem;
 	width: 33.33vw;
 	min-height: 4em;
 }
@@ -220,25 +231,25 @@ article section h3{
 }
 
 article section ul {
-	display: flex;
-	flex-flow: column;
+
 	list-style-type: none;
 	margin: 0.5em;
 	padding: 0;
+	text-shadow: 2px 2px 2px #999999;
 }
 
 #column1 {
-	color: rgb(232, 245, 248);
+	color: rgb(0, 32, 48);
 	background-color: rgb(73, 177, 198);
 }
 
 #column2 {
-	color: rgb(249, 250, 241);
+	color: rgb(0, 17, 0);
 	background-color: rgb(208, 211, 143);
 }
 
 #column3 {
-	color: rgb(254, 248, 240);
+	color: rgb(28, 8, 0);
 	background-color: rgb(246, 202, 131);
 }
 
@@ -267,9 +278,8 @@ footer {
 	background-color: rgb(10, 10, 10);
 	color: rgb(250, 250, 250);
 	
-	width: 100vw;
 	margin: 0;
-	padding: 1em 1em;
+	padding: 0.5em 0.5em;
 }
 
 footer blockquote {
@@ -282,7 +292,7 @@ footer hr {
 
 footer p {
 	display: block;
-	margin: 1em 10vw;
+	margin: 1em 5vw;
 	line-height: 2rem;
 }
 
